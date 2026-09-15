@@ -1,0 +1,20 @@
+{
+  "name": "zectrix-trmnl",
+  "version": "0.0.0",
+  "author": "LitoMore",
+  "license": "MIT",
+  "private": true,
+  "description": "Forward TRMNL screens to a ZecTrix device through the cloud Open API",
+  "type": "module",
+  "engines": {
+    "node": ">=22.16"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/cli.js",
+    "test": "node --test",
+    "check": "node --check src/cli.js && node --check src/bridge.js && node --check src/api.js && node --check src/config.js && node --check src/state.js && node --check src/image.js"
+  },
+  "dependencies": {
+    "sharp": "^0.35.4"
+  }
+}

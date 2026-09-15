@@ -1,0 +1,13 @@
+services:
+  bridge:
+    build: .
+    env_file: .env
+    environment:
+      STATE_DIR: /app/data
+    volumes:
+      - bridge-state:/app/data
+    restart: unless-stopped
+    stop_grace_period: 2m
+    init: true
+volumes:
+  bridge-state:
